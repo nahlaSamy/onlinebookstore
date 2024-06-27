@@ -1,0 +1,16 @@
+.nav-link-with-divider {
+    padding-right: 8px; /* Adjust spacing between links */
+    position: relative;
+}
+
+.nav-link-with-divider:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 4px; 
+    transform: translateY(-50%);
+    height: 40%; 
+    width: 1px; 
+    background-color: #000; 
+    padding: 2;
+}
