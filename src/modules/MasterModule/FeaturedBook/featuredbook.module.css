@@ -1,0 +1,105 @@
+.featuredBookSection {
+  padding: 40px 20px;
+  background-color: #f6f7f;
+  display: flex;
+  justify-content: center;
+}
+
+.mySwiper {
+  width: 100%;
+}
+
+.bookContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bookCover {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bookDetails {
+  text-align: left;
+  padding: 20px;
+}
+
+.bookTitle {
+  font-size: 1.2em;
+  color: #9b9b9b;
+  margin-bottom: 10px;
+}
+
+.bookAuthor {
+  font-size: 1em;
+  color: #ff5a5f;
+  margin-bottom: 10px;
+}
+
+.bookName {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.bookDescription {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.bookPrice {
+  font-size: 1.5em;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.viewMoreButton {
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #333;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+.viewMoreButton:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Custom styles for swiper navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ff5a5f;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .bookDetails {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .bookCover {
+    margin: 20px 0;
+  }
+}
