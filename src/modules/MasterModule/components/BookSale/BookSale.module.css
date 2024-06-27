@@ -1,0 +1,46 @@
+.bookSaleContainer {
+    background-color: #FFEFF4;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  .bookSaleContainer h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .bookSaleContainer p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .timer {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .timer div {
+    text-align: center;
+  }
+  
+  .timer span {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: #FF5A5F;
+  }
+  
+  .timer p {
+    margin: 0;
+    color: #666;
+  }
+  
+  .bookImage {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  
