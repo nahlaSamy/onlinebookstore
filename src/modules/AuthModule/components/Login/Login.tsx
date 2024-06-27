@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import logo from "../../../../assets/images/Logo.png";
 import pic from "../../../../assets/images/Picture.png";
@@ -73,6 +73,7 @@ export default function Login({ saveUserData }) {  // Destructure saveUserData f
               {errors.password && (
                 <p className="text-danger my-2">{errors?.password?.message}</p>
               )}
+              <Link to='/forget-pass'> Forget Password?</Link>
               <div className="d-flex flex-column align-items-center">
                 <button className='btn btn-warning w-50 my-3'>Login</button>
                 <button onClick={goToRegister} className='btn btn-success w-50'>Register</button>
