@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { jwtDecode } from 'jwt-decode'
 import { useState } from 'react'
 import ProtectedRoute from './modules/SharedModule/components/ProtectedRoute/ProtectedRoute'
+import ChangePass from './modules/AuthModule/components/ChangePass/ChangePass'
 
 function App() {
   let [userData, setUserData] = useState(null);
@@ -40,6 +41,8 @@ function App() {
         { path: 'register', element: <Register /> },
         { path: 'forget-pass', element: <ForgetPass /> },
         { path: 'reset-pass', element: <ResetPass /> },
+        { path: 'change-pass', element: <ChangePass /> },
+
       ]
     },
     {
