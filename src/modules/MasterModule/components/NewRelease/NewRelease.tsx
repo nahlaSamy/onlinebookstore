@@ -5,28 +5,29 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 import styles from './NewRelease.module.css';
 import bookpic from '../../../../assets/images/book44.png';
+import { apiProtected } from '../../../SharedModule/axiosInstance'; 
 
-export default function NewRelease() {
-  const [books, setBooks] = useState([]);
+interface Book {
+  cover: string;
+  title: string;
+  author: string;
+  price: number;
+  description: string;
+}
+
+const NewRelease: React.FC = () => {
+  const [books, setBooks] = useState<Book[]>([]);
 
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await fetch("https://upskilling-egypt.com:3007/api/book", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("userToken")}`,
-          },
-        });
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const result = await response.json();
+        const response = await apiProtected.get('/book');
+        const result = response.data;
 
         console.log('API response:', result);
 
-        const { data } = result;
-        if (Array.isArray(data)) {
-          const mappedData = data.map(book => ({
+        if (Array.isArray(result.data)) {
+          const mappedData = result.data.map((book: any) => ({
             cover: '', // Placeholder for image URL
             title: book.name,
             author: book.auther,
@@ -35,7 +36,7 @@ export default function NewRelease() {
           }));
           setBooks(mappedData);
         } else {
-          console.error('Data is not an array:', data);
+          console.error('Data is not an array:', result.data);
         }
       } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
@@ -45,7 +46,7 @@ export default function NewRelease() {
     fetchBooks();
   }, []);
 
-  const chunkArray = (array, chunkSize) => {
+  const chunkArray = (array: Book[], chunkSize: number): Book[][] => {
     return array.reduce((result, item, index) => {
       const chunkIndex = Math.floor(index / chunkSize);
 
@@ -56,7 +57,7 @@ export default function NewRelease() {
       result[chunkIndex].push(item);
 
       return result;
-    }, []);
+    }, [] as Book[][]);
   };
 
   const renderBooks = () => {
@@ -98,4 +99,6 @@ export default function NewRelease() {
       </Swiper>
     </div>
   );
-}
+};
+
+export default NewRelease;

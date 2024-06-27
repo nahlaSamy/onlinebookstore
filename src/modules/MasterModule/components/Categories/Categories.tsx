@@ -7,6 +7,7 @@ import cat from "../../../../assets/images/Cat1.png";
 import styles from './Categories.module.css';
 
 import { Keyboard, Navigation, Pagination } from 'swiper/modules';
+import { apiProtected } from '../../../SharedModule/axiosInstance'; 
 
 
 
@@ -16,14 +17,10 @@ const Categories = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("https://upskilling-egypt.com:3007/api/category", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("userToken")}`,
-          },
-        });
-        const data = await response.json();
-        setCategories(data);
+        const response = await apiProtected.get('/category');
+        setCategories(response.data);
       } catch (error) {
+        console.error("Error fetching categories:", error);
       }
     };
 
