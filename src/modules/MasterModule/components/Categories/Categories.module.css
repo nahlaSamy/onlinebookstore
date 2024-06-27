@@ -1,0 +1,58 @@
+.categoriesSection {
+  width: 100%;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.categoriesTitle {
+  font-size: 36px;
+  color: #3f3d56;
+  margin-bottom: 20px;
+}
+
+.mySwiper {
+  padding: 50px 0;
+}
+
+.categoryCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categoryImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.categoryName {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #3f3d56;
+}
+
+/* Custom styles for swiper navigation arrows */
+/* .customNextButton,
+.customPrevButton {
+  color: #ff5a5f;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
