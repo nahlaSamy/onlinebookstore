@@ -1,0 +1,80 @@
+.latestArticlesSection {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: #6c757d;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-size: 36px;
+    color: #212529;
+  }
+  
+  .articleCard {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+  }
+  
+  .articleCard:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .articleImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  .articleContent {
+    padding: 15px;
+  }
+  
+  .articleDate {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 10px;
+  }
+  
+  .articleTitle {
+    font-size: 18px;
+    color: #212529;
+    margin-bottom: 10px;
+  }
+  
+  .articleFooter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .articleFooter a {
+    color: #212529;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .articleFooter a:hover {
+    color: #007bff;
+  }
+  
+  .readAllButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .readAllButton:hover {
+    background-color: #0056b3;
+  }
+  
