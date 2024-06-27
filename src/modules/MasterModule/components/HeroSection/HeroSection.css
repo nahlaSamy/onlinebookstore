@@ -1,0 +1,88 @@
+.hero-section {
+    padding: 2rem;
+    background: linear-gradient(78.83deg, #FFE6E6 8.52%, #F5FFFE 68.88%, #FFFFFF 101.74%);
+
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #393280CC;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #393280CC;
+    margin-bottom: 1.5rem; 
+}
+
+.hero-section .book-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-swiper {
+    position: relative;
+}
+
+.custom-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid red;
+    color: red;
+    margin: 50px; 
+}
+
+.custom-nav-button:hover {
+    background-color: red;
+    color: white;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: none !important;
+
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-prev:after {
+    content: none !important;
+
+}
+
+.custom-nav-button:hover {
+    background-color: red;
+    color: white;
+}
+
+.swiper-button-prev {
+    left: 10px; 
+}
+
+.swiper-button-next {
+    right: 10px; 
+}
+
+.swiper-pagination {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #940707;
+    opacity: 1;
+    margin: 0 4px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: red;
+}
