@@ -16,6 +16,7 @@ import { jwtDecode } from 'jwt-decode'
 import { useState } from 'react'
 import ProtectedRoute from './modules/SharedModule/components/ProtectedRoute/ProtectedRoute'
 import ChangePass from './modules/AuthModule/components/ChangePass/ChangePass'
+import Product from './modules/MasterModule/components/Products/Product'
 
 function App() {
   let [userData, setUserData] = useState(null);
@@ -52,6 +53,7 @@ function App() {
       children: [
         { index: true, element: <LandingPage /> },
         { path: 'home', element: <LandingPage /> },
+        { path: 'Product', element: <Product /> },
         { path: 'books-list', element: <BooksList /> },
         { path: 'cart', element: <Cart /> },
       ]

@@ -5,9 +5,11 @@ import './index.css'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { store } from './modules/Redux/Store.tsx';
+import { Provider } from 'react-redux';
 // import 'swiper/swiper-bundle.min.css';
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
 )
