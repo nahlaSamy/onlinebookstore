@@ -17,9 +17,9 @@ export default function LandingPage() {
 
   return (
     <div>
-      <div className="">
+      {/* <div className="">
         <NavBar/>
-      </div>
+      </div> */}
       <div className='bg-info '>
         <HeroSection/>
       </div >
@@ -42,9 +42,9 @@ export default function LandingPage() {
 
        <LatestArticles/>
        </div>
-      <div className=''>
+      {/* <div className=''>
         <Footer/>
-      </div>
+      </div> */}
       <Modal size="xl" show={show} onHide={handleClose}>
         <Modal.Body>
           <ChangePass handleClose={handleClose} />

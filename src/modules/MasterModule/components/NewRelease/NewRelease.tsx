@@ -13,6 +13,7 @@ interface Book {
   author: string;
   price: number;
   description: string;
+  id:string;
 }
 
 const NewRelease: React.FC = () => {
@@ -32,7 +33,8 @@ const NewRelease: React.FC = () => {
             title: book.name,
             author: book.auther,
             price: book.price,
-            description: book.description
+            description: book.description,
+            id:book._id
           }));
           setBooks(mappedData);
         } else {
@@ -68,7 +70,7 @@ const NewRelease: React.FC = () => {
     const bookChunks = chunkArray(books, 4);
     return bookChunks.map((chunk, index) => (
       <SwiperSlide key={index}>
-        <div className={styles.bookContainer}>
+        <div className={styles.bookContainer} >
           {chunk.map((book, idx) => (
             <div className={styles.book} key={idx}>
               <img src={bookpic} alt={book.title} />
