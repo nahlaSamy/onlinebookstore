@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Typography, TextField, Divider, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { apiProtected } from '../../../SharedModule/axiosInstance'; e
+import { apiProtected } from '../../../SharedModule/axiosInstance'; 
 
 const Sidebar: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState('');
